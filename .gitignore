@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+bin
+obj
+demo
+.vs
+.vscode
+credentials.json
+.serverless

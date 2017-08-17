@@ -1,0 +1,61 @@
+Parameters:
+    DeploymentStage:
+      Description: Deployment name (e.g. production, stage)
+      Type: String
+    LogGroupName:
+      Description: The name of the log group
+      Type: String
+      Default: '/lambda-sharp/log-parser/dev'
+    LogStreamName:
+      Description: The name of the log stream
+      Type: String
+      Default: test-log-stream
+
+Resources:
+  # CLOUDWATCH LOG GROUP 
+  CloudWatchLogGroup:
+    Type: "AWS::Logs::LogGroup"
+    Properties: 
+      LogGroupName: 
+        Ref: LogGroupName
+      RetentionInDays: 1
+    
+  # CLOUDWATCH LOG STREAM
+  CloudWatchLogStream:
+    Type: "AWS::Logs::LogStream"
+    Properties: 
+      LogGroupName: 
+        Ref: CloudWatchLogGroup
+      LogStreamName: 
+        Ref: LogStreamName
+  
+  # LAMBDA EXECUTION ROLE
+  LambdaSharpLogParserRole:
+    Type: "AWS::IAM::Role"
+    Properties: 
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement: 
+          -
+            Effect: Allow
+            Principal: 
+              Service: 
+                - lambda.amazonaws.com
+            Action: 
+              - sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AWSLambdaFullAccess
+      RoleName: LambdaSharpLogParserRole
+  
+  # S3 BUCKET TO SAVE LOGS TO
+  S3Logs:
+    Type: "AWS::S3::Bucket"
+    Properties: 
+      BucketName: 
+        Fn::Join: ['-', [Ref: DeploymentStage, 'lambda-sharp-s3-logs']]
+      LifecycleConfiguration:
+        Rules:
+          - 
+            ExpirationInDays: 1
+            Id: delete-after-1-day
+            Status: Enabled
