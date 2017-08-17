@@ -28,43 +28,12 @@ In the LogGenerator directory, paste the following credentials in the `credentia
 #### Team 1 
 ```json 
 {
-    "consumer_key" : "AvWcq75KC8jJuKzNF7TOiLv5z",
-    "consumer_secret" : "okVzxcW7H7FV9Wn7HUzl3t2x2L7kxpCztWAhht58aMXWqHXVUW",
-    "access_token" : "38059844-yqm6BewaPT03c9GLaIACUcBNZnnyCmnS0OmNQ9PWs",
-    "access_secret" : "IVM8XlWF35SxBVPacQ2cKCBoKO6brImtzLqlZZjyYbSXD"
+    "consumer_key" : "",
+    "consumer_secret" : "",
+    "access_token" : "",
+    "access_secret" : ""
 }
 ```
-
-#### Team 2
-```json 
-{
-    "consumer_key" : "kOr9jFO0N0oFWEilI74ZTmaop",
-    "consumer_secret" : "eI1Tjv0tgO9nkYxAJfMslVJRRwJqKsosFwEjEbewYOZDRZhGll",
-    "access_token" : "820470222-yHssA3Qt7qNDX5A47VrR0UQJXuWARlcTL6Gok9Ut",
-    "access_secret" : "DK1d9WzGKBEAqH0HzFTChDdgsxUpjMhcUzDA2nmy6j0xX"
-}
-```
-
-#### Team 3
-```json 
-{
-    "consumer_key" : "Dcy5c0uufheP6eSbjvnlzyceP",
-    "consumer_secret" : "AmxndTnMunx2K2jroikBK5UiG8dABbtTkcl0pvdOMTY1nwHZpV",
-    "access_token" : "897963891975634944-PITAa4klOVP7fVF2nJ8pWVpX8XAA6AV",
-    "access_secret" : "nOlyeblXqCAqW9k1H4NorGWUWR1Z9DqFXUgFYjgbGBxs6"
-}
-```
-
-#### Team 4
-```json 
-{
-    "consumer_key" : "KdsdVpbRI5hJY8iYlje3tYbTn",
-    "consumer_secret" : "KF6Sck4fyq1544kBfs8VaGF0qoFwygYykZ1HSrVjjeREauJfV9",
-    "access_token" : "717226425745612800-iTJSiXRe3Wg4IdXrN88kJZfOrkZRRAK",
-    "access_secret" : "P2IF0vQOHWpyFdkDGPIpg1DzILszi9bvcMoUzjZNqmIBq"
-}
-```
-
 ---
 
 >**NOTE**:
